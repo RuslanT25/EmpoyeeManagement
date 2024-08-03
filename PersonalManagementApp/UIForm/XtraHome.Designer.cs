@@ -28,24 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraHome));
             ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             btnEmployees = new DevExpress.XtraBars.BarButtonItem();
             btnClose = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            btnDepartment = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(components);
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).BeginInit();
             SuspendLayout();
             // 
             // ribbonControl1
             // 
             ribbonControl1.ExpandCollapseItem.Id = 0;
-            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnEmployees, btnClose, barButtonItem2, barButtonItem3 });
+            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnEmployees, btnClose, barButtonItem2, barButtonItem3, btnDepartment });
             ribbonControl1.Location = new Point(0, 0);
-            ribbonControl1.MaxItemId = 5;
+            ribbonControl1.MaxItemId = 6;
             ribbonControl1.Name = "ribbonControl1";
             ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1 });
             ribbonControl1.QuickToolbarItemLinks.Add(barButtonItem2);
@@ -79,15 +83,24 @@
             barButtonItem3.Id = 4;
             barButtonItem3.Name = "barButtonItem3";
             // 
+            // btnDepartment
+            // 
+            btnDepartment.Caption = "Departments";
+            btnDepartment.Id = 5;
+            btnDepartment.ImageOptions.LargeImage = (Image)resources.GetObject("btnDepartment.ImageOptions.LargeImage");
+            btnDepartment.Name = "btnDepartment";
+            btnDepartment.ItemClick += btnDepartment_ItemClick;
+            // 
             // ribbonPage1
             // 
             ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup2 });
             ribbonPage1.Name = "ribbonPage1";
-            ribbonPage1.Text = "ribbonPage1";
+            ribbonPage1.Text = "Employee Control";
             // 
             // ribbonPageGroup1
             // 
             ribbonPageGroup1.ItemLinks.Add(btnEmployees);
+            ribbonPageGroup1.ItemLinks.Add(btnDepartment);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "Register";
             // 
@@ -97,16 +110,22 @@
             ribbonPageGroup2.Name = "ribbonPageGroup2";
             ribbonPageGroup2.Text = "Close";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // XtraHome
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1285, 693);
             Controls.Add(ribbonControl1);
+            IsMdiContainer = true;
             Name = "XtraHome";
             Text = "EmployeeControl";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +140,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnDepartment;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

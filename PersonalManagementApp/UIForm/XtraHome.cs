@@ -22,5 +22,11 @@ namespace UIForm
         {
             this.Close();
         }
+
+        private void btnDepartment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraDepartment xtraDepartment = new();
+            xtraDepartment.Show();
+        }
     }
 }
